@@ -1,0 +1,17 @@
+//Code for converting the text into speech
+
+import cv2
+import pytesseract
+import pyttsxx3
+engine = pyttsxx3.init()
+cap = cv2.VideoCapture(0)
+while True:
+    ret, frame = cap.read()
+    text = pytesseract.image_to_string(frame)
+    engine.say(text)
+    engine.runAndWait()
+    cv2.imshow('OCR', frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows
