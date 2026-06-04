@@ -1,0 +1,66 @@
+This project provides a scalable, affordable, and customizable assistive technology platform to foster inclusive learning environments. By transforming written text into real-time spoken audio, the system bridges critical learning gaps, increases classroom engagement, and improves the overall academic performance and social integration of disabled students in resource-limited settings.
+## 💡 Key Applications
+
+* 📰 Accessible Reading: Reading newspapers, textbooks, and captions.
+* 💊 Daily Assistance: Interpreting medicine labels and navigational signs.
+* 🏫 Special Education: Providing an affordable desktop learning model for classrooms.
+
+------------------------------
+## 🎯 Project Objectives## 1. Hardware Setup & Configuration
+
+* Seamless Integration: Link peripherals (Webcam, Speakers, Display) with the Raspberry Pi 4.
+* Stable Deployment: Maintain system integrity using specialized 5V power supply configurations.
+* Operating System: Utilize standard Linux-based Raspberry Pi OS (Raspbian) environments.
+
+## 2. Core Functionality
+
+* Optical Image Capture: Capture physical documents using a USB Webcam.
+* Text-to-Speech (TTS): Convert extracted text characters into clear audio speech.
+* Multi-Channel Audio: Deliver output via HDMI, 3.5mm audio jacks, or external USB speakers.
+
+------------------------------
+## 🛠️ System Architecture & Hardware
+The platform leverages the computational power of the Raspberry Pi 4 Single-Board Computer alongside standard peripheral devices.
+
+       [ USB Webcam ] --------> ( Captures Text Image )
+
+                                       |
+                                       v
+ [ Power Supply (5V) ] ----> [ Raspberry Pi 4 ] <--- [ Keyboard & Mouse ]
+ (Micro-USB/Type-C)          (Broadcom BCM2711)
+                                       |
+                                       v
+                               [ Audio / Video ]
+                               /               \
+                              v                 v
+                 [ Monitor / Display ]     [ USB Speakers / Headphones ]
+
+## 🎛️ Component Breakdown
+
+* SoC: Broadcom BCM2711 Quad-core ARM Cortex-A72 processor.
+* Memory: 2GB to 8GB RAM options (allocates temporary execution data).
+* Storage: MicroSD Card pre-loaded with Raspberry Pi OS.
+* Peripherals: High-speed USB 3.0/2.0 ports for webcams, keyboards, and audio peripherals.
+* Connectivity: Gigabit Ethernet, Built-in Wi-Fi, and Bluetooth modules.
+
+------------------------------
+## 🚀 Getting Started & Setup## 🔌 Hardware Connections
+
+   1. Plug the USB Webcam into one of the blue USB 3.0 ports on the Raspberry Pi 4.
+   2. Connect your USB Speakers or Headphones into an available USB or 3.5mm audio port.
+   3. Connect your Monitor using an HDMI-compatible cable to the micro-HDMI port.
+   4. Hook up your USB Keyboard and Mouse.
+   5. Insert the pre-configured MicroSD card and attach the 5V Power Supply.
+
+## 💻 Software Implementation Checklist
+
+Note: This section can be updated with your exact script names (e.g., Python scripts using OCR engines like Tesseract and TTS engines like gTTS/Espeak).
+
+
+* Ensure your Raspberry Pi OS environment is fully updated:
+
+sudo apt update && sudo apt upgrade -y
+
+* Configure the default audio driver settings to output speech through your preferred device (HDMI or USB/3.5mm Jack).
+
+------------------------------
