@@ -1,0 +1,8 @@
+pip install opencv-python
+pip install pytesseract
+pip install pyttsx3
+
+//For Ubuntu/Linux/Debian-
+sudo apt update
+sudo apt install tesseract-ocr
+tesseract --version
